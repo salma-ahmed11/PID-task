@@ -8,15 +8,10 @@
  PID is a closed loop system which provides you feedback every output command, this helps you to achieve accuracy and make sure that everything is going like what you've planned.
 
  # What's Proportional control?
- It's a type of linear feedback system where a machine's corrective action is scaled directly to the size of the error(the difference between the set point and the actual state) by multiplying it to a constant k_p.
+ It's a type of linear feedback system where a machine's corrective action is scaled directly to the size of the error(the difference between the set point and the actual state) by multiplying it to a constant kp.
 
-### For instance:
-
- A motor has a direction of 5 degrees, which corresponds to 0.5v and the set point is 45 degrees, corresponding to 4.5v. The error here equals to 4v (4.5-0.5). We multiply this error by a constant k_p, whose appropiate value ypu determine. Let's assume its value is 5 in this case
-
- The correction action will be:
  
- $$4*5=20v$$
+ $$Output = kp * error $$
  
  (you can use a voltage regulator in this case) however, this value might exceed the set point, causing an overshoot. After that, the system will recalculate all this again and it's possible that another overshoot may occur, and it might even continue oscillating.
 
@@ -24,10 +19,13 @@
 
  # What's the role of Derivative control?
 
- Its primary role is to predict future error by analyzing the rate at which the process variable is changing and multiplting it by constant k_d, thereby applying a dampening effect that minimizes overshoot and stabilizes the system.
+ Its primary role is to predict future error by analyzing the rate at which the process variable is changing and multiplting it by constant kd, thereby applying a dampening effect that minimizes overshoot and stabilizes the system.
+
+ $$Output = (error - pervious.error) / (time.difference)$$
 
  # What's the role of Integral control?
- It's primary role is to eliminate steady-state error. By accumulating the error over time and multiplying it by constant k_i, it forces the syst10em's output to exactly match the desired target, compensating for persistent offsets and external disturbances. 
+ It's primary role is to eliminate steady-state error. By accumulating the error over time and multiplying it by constant ki, it forces the syst10em's output to exactly match the desired target, compensating for persistent offsets and external disturbances. 
+                       $$Output = integral + error * dt $$
 
 
 
