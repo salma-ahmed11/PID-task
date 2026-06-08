@@ -1,5 +1,7 @@
 # What is PID ?
  A PID controller is an instrument that receives input data from sensors, calculates the difference between the actual value and the desired setpoint, and adjusts outputs to control variables such as temperature, flow rate, speed, pressure, and voltage. It does this through three mechanisms: proportional control, which reacts to current error; integral control, which addresses accumulated past errors; and derivative control, which predicts future errors. The PID controller sums those three components to compute the output.
+
+ 
  ![images.png](https://github.com/salma-ahmed11/PID-task/blob/38f72fe9671732e31aa8c0888de5d37a88408bef/images/images.png)
  
  # Why do we use PID?
@@ -33,7 +35,7 @@
 
 The controller calculates the control output $u(t)$ based on the error $e(t)$, which is the difference between the setpoint and the measured speed:
 
-![](https://github.com/salma-ahmed11/PID-task/blob/83fa5413ff7362d803e2cc5e0336d3cc53a269b6/images/WhatsApp%20Image%202026-06-09%20at%2012.31.38%20AM.jpeg)
+![WhatsApp Image 2026-06-09](https://github.com/salma-ahmed11/PID-task/blob/83fa5413ff7362d803e2cc5e0336d3cc53a269b6/images/WhatsApp%20Image%202026-06-09%20at%2012.31.38%20AM.jpeg)
 
 ### Where:
 * **$K_p$ (Proportional Gain):** Corrects the error based on its current value.
