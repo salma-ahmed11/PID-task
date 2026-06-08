@@ -33,7 +33,7 @@
 
 The controller calculates the control output $u(t)$ based on the error $e(t)$, which is the difference between the setpoint and the measured speed:
 
-$$u(t) = K_p e(t) + K_i \int_0^t e(\tau) d\tau + K_d \frac{de(t)}{dt}$$
+![](https://github.com/salma-ahmed11/PID-task/blob/83fa5413ff7362d803e2cc5e0336d3cc53a269b6/images/WhatsApp%20Image%202026-06-09%20at%2012.31.38%20AM.jpeg)
 
 ### Where:
 * **$K_p$ (Proportional Gain):** Corrects the error based on its current value.
